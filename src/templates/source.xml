@@ -1,0 +1,76 @@
+<mei xmlns="http://www.music-encoding.org/ns/mei" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="edirom_source_786a4e99-aacd-459d-a40a-79c894e92497" meiversion="2013">
+    <meiHead>
+        <fileDesc>
+            <titleStmt>
+                <title/>
+            </titleStmt>
+            <pubStmt/>
+            <sourceDesc>
+                <source>
+                    <identifier type="siglum"><!--ED--></identifier>
+                    <titleStmt>
+                        <title><!--Edition--></title>
+                    </titleStmt>
+                    <pubStmt/>
+                    <notesStmt>
+                        <!-- reference a full text TEI encoded source description -->
+                        <!--<annot type="descLink" plist="xmldb:exist:///db/apps/contents/musicSources/freidi-musicSourceDesc_D1849B.xml"/>-->
+                        <annot type="descLink" plist=""/>
+                        <!-- add SVG overlay objects -->
+                        <!--<annot type="overlay" xml:id="overlay_1" plist="#overlay_1_1">
+                            <title>sample SVG overlay</title>
+                        </annot>-->
+                    </notesStmt>
+                    <relationList>
+                        <!-- add isEmbodiementOf relation to work-file -->
+                        <!--<relation rel="isEmbodimentOf" target="xmldb:exist:///db/contents/works/edirom_work_6eb12027-28e6-4ca2-96cb-5152e0225292.xml#edirom_work_6eb12027-28e6-4ca2-96cb-5152e0225292_exp1"/>-->
+                        <relation rel="isEmbodimentOf" target=""/>
+                    </relationList>
+                </source>
+            </sourceDesc>
+        </fileDesc>
+    </meiHead>
+    <music>
+        <facsimile>
+            <!--<surface xml:id="edirom_surface_a7bd22c8-2c7a-4c38-a4c9-ec470be53043" n="1">
+                <graphic target="op_079b_sa-h2_05v_s10.jpg" xml:id="edirom_graphic_88abfab3-3c98-4f26-9ba6-f9102cb3059c" type="facsimile" width="1868" height="2533"/>
+                <zone xml:id="edirom_zone_ee233e95-68c3-4e76-b4af-0206451b34ff" type="measure" ulx="206" uly="440" lrx="806" lry="926"/>
+                <zone xml:id="edirom_zone_ca12c3c2-e158-41e5-a23b-6086ba03c5be" type="measure" ulx="728" uly="459" lrx="1082" lry="926"/>
+                <zone xml:id="edirom_zone_492fbc19-eb14-41d0-a8b7-a928f6e16208" type="measure" ulx="1019" uly="475" lrx="1377" lry="911"/>
+                <zone xml:id="edirom_zone_05870a3b-7687-44c2-9ab3-c2b197de77ed" type="measure" ulx="1315" uly="475" lrx="1704" lry="911"/>
+                <zone xml:id="edirom_zone_a840717a-0f2c-4451-a5bc-314728644a77" type="measure" ulx="226" uly="926" lrx="705" lry="1362"/>
+                <zone xml:id="edirom_zone_b50945f9-1166-49b7-984a-0dd4585d1fd1" type="measure" ulx="630" uly="922" lrx="1004" lry="1358"/>
+                <zone xml:id="edirom_zone_088c205d-971c-40e5-9824-4e00d023b516" type="measure" ulx="945" uly="926" lrx="1326" lry="1362"/>
+                <zone xml:id="edirom_zone_708ab758-9fd7-45bc-b56d-fb834b96f916" type="measure" ulx="1276" uly="922" lrx="1712" lry="1358"/>
+                <zone xml:id="edirom_zone_793e53ae-6e6d-429c-81b0-0174af063ffe" type="measure" ulx="214" uly="1381" lrx="661" lry="1817"/>
+                <zone xml:id="edirom_zone_10db79a1-6ca5-4ade-9a82-00093f104975" type="measure" ulx="588" uly="1389" lrx="880" lry="1813"/>
+                <svg:svg width="100%" height="100%" xml:id="overlay_1_1">
+                    <svg:desc>sample svg rect</svg:desc>
+                    <svg:g alignment-baseline="baseline">
+                        <svg:rect width="100" height="100" fill="none" stroke="red" stroke-width="3px" x="100" y="100"/>
+                    </svg:g>
+                </svg:svg>
+            </surface>-->
+        </facsimile>
+        <body>
+            <!--<mdiv xml:id="edirom_mdiv_17c0f578-a1a9-4fa1-880d-494ef2255369" label="Nr. 6">
+                <score>
+                    <scoreDef/>
+                    <section>
+                        <measure n="1" xml:id="edirom_measure_87127d9f-e334-4975-9c9c-10b2e6a3a40d" facs="#edirom_zone_ee233e95-68c3-4e76-b4af-0206451b34ff"/>
+                        <measure n="2" xml:id="edirom_measure_4b8a5d0f-82d4-4af0-849a-72cfee20baae" facs="#edirom_zone_ca12c3c2-e158-41e5-a23b-6086ba03c5be"/>
+                        <measure n="3" xml:id="edirom_measure_6d31f432-fb33-4a85-a342-45f40346c717" facs="#edirom_zone_492fbc19-eb14-41d0-a8b7-a928f6e16208"/>
+                        <measure n="4" xml:id="edirom_measure_8a7cc47f-35a0-47c7-96d5-aa3473e6dcd4" facs="#edirom_zone_05870a3b-7687-44c2-9ab3-c2b197de77ed"/>
+                        <measure n="5" xml:id="edirom_measure_17805751-cff7-4aa7-854e-c97e7ccc6833" facs="#edirom_zone_a840717a-0f2c-4451-a5bc-314728644a77"/>
+                        <measure n="6" xml:id="edirom_measure_bccfad43-0199-46ab-9061-adbd90e5fca3" facs="#edirom_zone_b50945f9-1166-49b7-984a-0dd4585d1fd1"/>
+                        <measure n="7" xml:id="edirom_measure_d462f955-88da-4956-adaf-679ebb1703e7" facs="#edirom_zone_088c205d-971c-40e5-9824-4e00d023b516"/>
+                        <measure n="8" xml:id="edirom_measure_af55f3ed-b502-4543-b2d2-8afc29748966" facs="#edirom_zone_708ab758-9fd7-45bc-b56d-fb834b96f916"/>
+                        <measure n="9" xml:id="edirom_measure_a2f17b70-d365-482b-a797-2b426e5fa129" facs="#edirom_zone_793e53ae-6e6d-429c-81b0-0174af063ffe"/>
+                        <measure n="10" xml:id="edirom_measure_f2ef23c4-1806-4df8-8e78-27af3777abaa" facs="#edirom_zone_10db79a1-6ca5-4ade-9a82-00093f104975"/>
+                    </section>
+                </score>
+            </mdiv>-->
+            <mdiv></mdiv>
+        </body>
+    </music>
+</mei>

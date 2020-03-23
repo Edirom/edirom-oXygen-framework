@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annot type="criticalCommentary" xmlns="http://www.music-encoding.org/ns/mei">
+  <annot type="editorialComment" xml:id="edirom_annot_318fe1ea-8908-44bc-b170-37678a3d1ccc" plist="xmldb:exist:///db/contents/sources/edirom_source_9bbe6990-8ffb-4f95-a05e-2b9b3eb0ed8a.xml#edirom_measure_99bc58d6-ea30-4df7-af70-7bf235b35e07">
+    <title>bla blub</title>
+    <p>test anmerkung</p>
+    <ptr type="priority" target="#ediromAnnotPrio1"/>
+    <ptr type="categories" target="#ediromDefaultCategory_Articulation"/>
+  </annot>
+</annot>

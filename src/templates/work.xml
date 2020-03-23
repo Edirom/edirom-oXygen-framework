@@ -1,0 +1,129 @@
+<mei xmlns="http://www.music-encoding.org/ns/mei" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="" meiversion="2013">
+    <meiHead>
+        <fileDesc>
+            <titleStmt>
+                <title/>
+            </titleStmt>
+            <pubStmt/>
+        </fileDesc>
+        <workDesc>
+            <work>
+                <titleStmt>
+                    <title></title>
+                    <respStmt>
+                        <persName role="composer"></persName>
+                    </respStmt>
+                </titleStmt>
+                <notesStmt>
+                    <annot type="criticalCommentary">
+                        <!--<annot type="editorialComment" xml:id="edirom_annot_318fe1ea-8908-44bc-b170-37678a3d1ccc" plist="xmldb:exist:///db/contents/sources/edirom_source_9bbe6990-8ffb-4f95-a05e-2b9b3eb0ed8a.xml#edirom_measure_99bc58d6-ea30-4df7-af70-7bf235b35e07">
+                            <title>Annotation title</title>
+                            <p>test anmerkung</p>
+                            <ptr type="priority" target="#ediromAnnotPrio1"/>
+                            <ptr type="categories" target="#ediromDefaultCategory_Articulation #ediromDefaultCategory_Bogensetzung"/>
+                        </annot>-->
+                    </annot>
+                </notesStmt>
+                <classification>
+                    <classCode xml:id="ediromCategory"/>
+                    <classCode xml:id="ediromPriority"/>
+                    <termList classcode="#ediromCategory">
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_Bogensetzung">
+                            <name xml:lang="en">Bogensetzung</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_VerbalInstruction">
+                            <name xml:lang="en">Verbal instruction</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_Embellishment">
+                            <name xml:lang="en">Embellishment</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_Correction">
+                            <name xml:lang="en">Correction</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_DiastematicMark">
+                            <name xml:lang="en">Diastematic mark</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_Dynamics">
+                            <name xml:lang="en">Dynamics</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_Harmony">
+                            <name xml:lang="en">Harmony</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_Rhythm">
+                            <name xml:lang="en">Rhythm</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_Articulation">
+                            <name xml:lang="en">Articulation</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_EditorialIntervention">
+                            <name xml:lang="en">Editorial intervention</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_InclusionFromA">
+                            <name xml:lang="en">Inclusion from A</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_NotationalPeculiarity">
+                            <name xml:lang="en">Notational peculiarity</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_NotationalVariant">
+                            <name xml:lang="en">Notational variant</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_NotationalImprecision">
+                            <name xml:lang="en">Notational imprecision</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_AlterationByAnalogy">
+                            <name xml:lang="en">Alteration by analogy</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_StematicRelationship">
+                            <name xml:lang="en">Stemmatic Relationship</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_SeparativeVariant">
+                            <name xml:lang="en">Separative Variant</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_ConjunctiveError">
+                            <name xml:lang="en">Conjunctive Error</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_Score">
+                            <name xml:lang="en">Score</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_Lyrics">
+                            <name xml:lang="en">Direction</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_Direction">
+                            <name xml:lang="en">Lyrics</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_Text">
+                            <name xml:lang="en">Text</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_Music">
+                            <name xml:lang="en">Music</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_Stage">
+                            <name xml:lang="en">Stage</name>
+                        </term>
+                        <term classcode="ediromCategory" xml:id="ediromDefaultCategory_Scene">
+                            <name xml:lang="en">Scene</name>
+                        </term>
+                    </termList>
+                    <termList classcode="#ediromPriority">
+                        <term classcode="#ediromPriority" xml:id="ediromAnnotPrio1">
+                            <name xml:lang="de">Priorität 1</name>
+                            <name xml:lang="en">Priority 1</name>
+                        </term>
+                        <term classcode="#ediromPriority" xml:id="ediromAnnotPrio2">
+                            <name xml:lang="de">Priorität 2</name>
+                            <name xml:lang="en">Priority 2</name>
+                        </term>
+                        <term classcode="#ediromPriority" xml:id="ediromAnnotPrio3">
+                            <name xml:lang="de">Priorität 3</name>
+                            <name xml:lang="en">Priority 3</name>
+                        </term>
+                    </termList>
+                </classification>
+                <expressionList>
+                    <!--<expression label="Expression name" xml:id="edirom_work_8d0af230-7512-4119-84c3-c57bcbc82d6b_exp1"/>-->
+                </expressionList>
+            </work>
+        </workDesc>
+    </meiHead>
+    <music/>
+</mei>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="edirom-oXygen-framework" default="dist">
+  
+  <!-- import default properties from file -->
+  <property file="build.properties"/>
+  <property file="local.build.properties"/>
+  <condition property="version-status" value="${version}-${status}" else="${version}">
+    <and>
+      <isset property="status"/>
+      <not>
+        <equals arg1="${status}" arg2=""/>
+      </not>
+    </and>
+  </condition>
+  <property name="line.separator">&#xa;</property>
+  
+  <target name="init">
+    <mkdir dir="${build.dir}"/>
+    <mkdir dir="${dist.dir}"/>
+  </target>
+  
+  <target name="clean">
+    <delete dir="${build.dir}"/>
+  </target>
+  
+  <target name="reset">
+    <delete dir="${build.dir}"/>
+    <delete dir="${dist.dir}"/>
+  </target>
+
+  <target name="get-local-git-revision">
+    <description>Get the current git revision</description>
+    <exec executable="git" outputproperty="local.revision">
+      <arg value="describe"/>
+      <arg value="--tags"/>
+      <arg value="--always"/>
+      <arg value="HEAD"/>
+    </exec>
+    <echo>Local revision: ${local.revision}</echo>
+    <property name="revision" value="${local.revision}"/>
+  </target>
+  
+  <target name="load-license">
+    <loadfile srcfile="LICENSE.txt" encoding="utf-8" property="license"/>
+    <echo>${license}</echo>
+  </target>
+  
+  <target name="dist" depends="clean,init,get-local-git-revision,load-license">
+    <property name="zip" value="${name.short}_${revision}.zip"/>
+    <property name="dest" value="${build.dir}/${name.short}"/>
+    
+    <!--<exec executable="git" dir="submodules/TODO/">
+      <arg value="checkout"/>
+      <arg value="master"/>
+    </exec>
+    
+    <exec executable="git" dir="submodules/TODO/">
+      <arg value="pull"/>
+    </exec>-->
+    
+    <copy todir="${dest}" flatten="false" outputencoding="utf-8">
+      <fileset dir=".">
+        <exclude name="build.xml"/>
+        <exclude name="build.properties"/>
+        <exclude name="README.md"/>
+        <exclude name="build/**"/>
+        <exclude name="dist/**"/>
+        <exclude name="miscellaneous/**"/>
+        <exclude name="submodules/"/>
+      </fileset>
+      <filterset>
+        <filter token="NAME" value="${name}"/>
+        <filter token="ID" value="${name.short}"/>
+        <filter token="DESCRIPTION" value="${name} ${version-status}${line.separator}${description}"/>
+        <filter token="VERSION" value="${version}"/>
+        <filter token="LICENSE" value="${license}"/>
+        <filter token="ZIP" value="${zip}"/>
+      </filterset>
+    </copy>
+    <copy todir="${dest}/schemata" flatten="true" outputencoding="utf-8">
+      <fileset dir=".">
+        <include name="submodules/TODO/"/>
+      </fileset>
+      <filterset>
+        <filter token="NAME" value="${name}"/>
+        <filter token="ID" value="${name.short}"/>
+        <filter token="DESCRIPTION" value="${name} ${version-status}${line.separator}${description}"/>
+        <filter token="VERSION" value="${version}"/>
+        <filter token="LICENSE" value="${license}"/>
+        <filter token="ZIP" value="${zip}"/>
+      </filterset>
+    </copy>
+    
+    <zip basedir="${build.dir}" excludes="${name.short}/extension.xml" destfile="${dist.dir}/${revision}/${zip}"/>
+    <copy file="${dest}/extension.xml" todir="${dist.dir}/${revision}/"/>
+  </target>
+  
+</project>

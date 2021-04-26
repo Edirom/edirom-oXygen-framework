@@ -59,7 +59,7 @@
     </exec>-->
     
     <copy todir="${dest}" flatten="false" outputencoding="utf-8">
-      <fileset dir=".">
+      <fileset dir="./src/">
         <exclude name="build.xml"/>
         <exclude name="build.properties"/>
         <exclude name="README.md"/>

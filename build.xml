@@ -41,7 +41,7 @@
   </target>
   
   <target name="load-license">
-    <loadfile srcfile="LICENSE.txt" encoding="utf-8" property="license"/>
+    <loadfile srcfile="LICENSE" encoding="utf-8" property="license"/>
     <echo>${license}</echo>
   </target>
   

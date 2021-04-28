@@ -2,3 +2,7 @@
 	path = gitmodules/veniEO
 	url = https://github.com/Edirom/veniEO.git
 	branch = develop
+[submodule "edirom-edition-schema"]
+	path = gitmodules/edirom-edition-schema
+	url = https://github.com/Edirom/edirom-edition-schema.git
+	branch = develop

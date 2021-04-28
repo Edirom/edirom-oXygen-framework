@@ -17,7 +17,7 @@
 								<Integer>2</Integer>
 							</field>
 							<field name="uri">
-								<String>${framework}/schemata/prefs/v1.3/prefs.xsd</String>
+								<String>${framework}/schemata/prefs/v1.0/prefs.xsd</String>
 							</field>
 						</docTypeSchema>
 					</field>
@@ -235,7 +235,7 @@
 					<field name="customAttributeValueEditor">
 						<null/>
 					</field>
-				<field name="textModeExternalObjectInsertionHandler">
+					<field name="textModeExternalObjectInsertionHandler">
 						<null/>
 					</field>
 				</documentTypeDescriptor>

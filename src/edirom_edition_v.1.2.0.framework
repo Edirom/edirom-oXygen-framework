@@ -17,7 +17,7 @@
 								<Integer>2</Integer>
 							</field>
 							<field name="uri">
-								<String>${framework}/schemata/edition/v1.2.0/edirom_edition.xsd</String>
+								<String>${framework}/schemata/edirom-edition/v1.2.0/edirom_edition.xsd</String>
 							</field>
 						</docTypeSchema>
 					</field>

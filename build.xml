@@ -92,7 +92,11 @@
         </copy>
         <copy todir="${dir.dest}/schemata" flatten="false" outputencoding="utf-8">
             <fileset dir="gitmodules/edirom-edition-schema/" />
-            
+        </copy>
+        <copy todir="${dir.dest}/tools" flatten="false" outputencoding="utf-8">
+            <fileset dir="gitmodules/" >
+                <exclude name="edirom-edition-schema/**"/>
+            </fileset>
         </copy>
     </target>
     <target name="dist" depends="build">

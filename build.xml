@@ -36,7 +36,33 @@
         <loadfile srcfile="LICENSE" encoding="utf-8" property="license" />
         <echo>${license}</echo>
     </target>
-    <target name="build" depends="clean, get-local-git-revision, load-license">
+    <target name="build.develop" if="${build.develop}">
+        <!-- Edirom-Edition-Packaging -->
+        <exec executable="git" dir="gitmodules/Edirom-Edition-Packaging/">
+            <arg value="checkout" />
+            <arg value="develop" />
+        </exec>
+        <exec executable="git" dir="gitmodules/Edirom-Edition-Packaging/">
+            <arg value="pull" />
+        </exec>
+        <!-- edirom-edition-schema -->
+        <exec executable="git" dir="gitmodules/edirom-edition-schema/">
+            <arg value="checkout" />
+            <arg value="develop" />
+        </exec>
+        <exec executable="git" dir="gitmodules/edirom-edition-schema/">
+            <arg value="pull" />
+        </exec>
+        <!-- veniEO -->
+        <exec executable="git" dir="gitmodules/veniEO/">
+            <arg value="checkout" />
+            <arg value="develop" />
+        </exec>
+        <exec executable="git" dir="gitmodules/veniEO/">
+            <arg value="pull" />
+        </exec>
+    </target>
+    <target name="build" depends="clean, build.develop, build.stable, get-local-git-revision, load-license">
         <property name="dir.dest" value="${dir.build}/${name.short}" />
         <copy todir="${dir.build}" flatten="true" outputencoding="utf-8">
             <fileset dir="src">

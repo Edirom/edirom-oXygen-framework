@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." name="edirom-oXygen-framework" default="dist">
-    <!-- import default properties from file -->
-    <property file="build.properties" />
     <property file="local.build.properties" />
+    <property file="build.properties" />
     <condition property="version-status" value="${version}-${status}" else="${version}">
         <and>
             <isset property="status" />

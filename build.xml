@@ -11,14 +11,14 @@
         </and>
     </condition>
     <target name="init">
-        <mkdir dir="${build.dir}" />
+        <mkdir dir="${dir.build}" />
         <mkdir dir="${dist.dir}" />
     </target>
     <target name="clean">
-        <delete dir="${build.dir}" />
+        <delete dir="${dir.build}" />
     </target>
     <target name="reset">
-        <delete dir="${build.dir}" />
+        <delete dir="${dir.build}" />
         <delete dir="${dist.dir}" />
     </target>
     <target name="get-local-git-revision">
@@ -38,7 +38,7 @@
     </target>
     <target name="dist" depends="clean,init,get-local-git-revision,load-license">
         <property name="zip" value="${name.short}_${revision}.zip" />
-        <property name="dest" value="${build.dir}/${name.short}" />
+        <property name="dest" value="${dir.build}/${name.short}" />
         <!--<exec executable="git" dir="submodules/TODO/">
       <arg value="checkout"/>
       <arg value="master"/>
@@ -79,7 +79,7 @@
                 <filter token="ZIP" value="${zip}" />
             </filterset>
         </copy>
-        <zip basedir="${build.dir}" excludes="${name.short}/extension.xml" destfile="${dist.dir}/${revision}/${zip}" />
+        <zip basedir="${dir.build}" excludes="${name.short}/extension.xml" destfile="${dist.dir}/${revision}/${zip}" />
         <copy file="${dest}/extension.xml" todir="${dist.dir}/${revision}/" />
     </target>
 </project>

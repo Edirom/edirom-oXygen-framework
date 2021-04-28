@@ -17,7 +17,7 @@
 								<Integer>2</Integer>
 							</field>
 							<field name="uri">
-								<String>${framework}/schemata/prefs/v1.0/prefs.xsd</String>
+								<String>${framework}/schemata/prefs/v1.0/prefs.rng</String>
 							</field>
 						</docTypeSchema>
 					</field>

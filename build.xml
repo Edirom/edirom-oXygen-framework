@@ -10,7 +10,6 @@
             </not>
         </and>
     </condition>
-    <property name="line.separator">&#xa;</property>
     <target name="init">
         <mkdir dir="${build.dir}" />
         <mkdir dir="${dist.dir}" />

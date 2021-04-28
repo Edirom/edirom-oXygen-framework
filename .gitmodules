@@ -1,0 +1,4 @@
+[submodule "veniEO"]
+	path = gitmodules/veniEO
+	url = https://github.com/Edirom/veniEO.git
+	branch = develop

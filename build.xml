@@ -90,10 +90,9 @@
                 <exclude name="extension.xml" />
             </fileset>
         </copy>
-        <copy todir="${dir.dest}/schemata" flatten="true" outputencoding="utf-8">
-            <fileset dir=".">
-                <include name="submodules/TODO/" /><?TODO  ?>
-            </fileset>
+        <copy todir="${dir.dest}/schemata" flatten="false" outputencoding="utf-8">
+            <fileset dir="gitmodules/edirom-edition-schema/" />
+            
         </copy>
     </target>
     <target name="dist" depends="build">

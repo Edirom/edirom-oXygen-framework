@@ -12,14 +12,14 @@
     </condition>
     <target name="init">
         <mkdir dir="${dir.build}" />
-        <mkdir dir="${dist.dir}" />
+        <mkdir dir="${dir.dist}" />
     </target>
     <target name="clean">
         <delete dir="${dir.build}" />
     </target>
     <target name="reset">
         <delete dir="${dir.build}" />
-        <delete dir="${dist.dir}" />
+        <delete dir="${dir.dist}" />
     </target>
     <target name="get-local-git-revision">
         <description>Get the current git revision</description>
@@ -79,7 +79,7 @@
                 <filter token="ZIP" value="${zip}" />
             </filterset>
         </copy>
-        <zip basedir="${dir.build}" excludes="${name.short}/extension.xml" destfile="${dist.dir}/${revision}/${zip}" />
-        <copy file="${dest}/extension.xml" todir="${dist.dir}/${revision}/" />
+        <zip basedir="${dir.build}" excludes="${name.short}/extension.xml" destfile="${dir.dist}/${revision}/${zip}" />
+        <copy file="${dest}/extension.xml" todir="${dir.dist}/${revision}/" />
     </target>
 </project>

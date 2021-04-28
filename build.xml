@@ -62,6 +62,11 @@
             <arg value="pull" />
         </exec>
     </target>
+    <target name="build.stable" unless="${build.develop}">
+        <exec executable="git" dir=".">
+            <arg value="git reset --hard --recurse-submodule"/>
+        </exec>
+    </target>
     <target name="build" depends="clean, build.develop, build.stable, get-local-git-revision, load-license">
         <property name="dir.dest" value="${dir.build}/${name.short}" />
         <copy todir="${dir.build}" flatten="true" outputencoding="utf-8">

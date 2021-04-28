@@ -6,3 +6,7 @@
 	path = gitmodules/edirom-edition-schema
 	url = https://github.com/Edirom/edirom-edition-schema.git
 	branch = develop
+[submodule "Edirom-Edition-Packaging"]
+	path = gitmodules/Edirom-Edition-Packaging
+	url = https://github.com/Edirom/Edirom-Edition-Packaging.git
+	branch = develop

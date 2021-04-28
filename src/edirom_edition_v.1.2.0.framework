@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="18.1" xml:space="preserve">
-	<map>
+<serialized xml:space="preserve">
+	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
 			<documentTypeDescriptor-array>
@@ -147,7 +147,7 @@
 						<String-array/>
 					</field>
 					<field name="description">
-						<String></String>
+						<String>Framework for Edirom Edition files for Edirom Viewer.</String>
 					</field>
 					<field name="doctypeRules">
 						<documentTypeRule-array>
@@ -233,8 +233,11 @@
 					<field name="customAttributeValueEditor">
 						<null/>
 					</field>
+					<field name="textModeExternalObjectInsertionHandler">
+						<null/>
+					</field>
 				</documentTypeDescriptor>
 			</documentTypeDescriptor-array>
 		</entry>
-	</map>
+	</serializableOrderedMap>
 </serialized>

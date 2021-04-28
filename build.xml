@@ -36,7 +36,41 @@
         <loadfile srcfile="LICENSE" encoding="utf-8" property="license" />
         <echo>${license}</echo>
     </target>
-    <target name="dist" depends="clean,init,get-local-git-revision,load-license">
+    <target name="build" depends="clean, get-local-git-revision, load-license">
+        <property name="dir.dest" value="${dir.build}/${name.short}" />
+        <copy todir="${dir.build}" flatten="true" outputencoding="utf-8">
+            <fileset dir="src">
+                <include name="extension.xml"/>
+            </fileset>
+            <filterset>
+                <filter token="NAME" value="${name}" />
+                <filter token="ID" value="${name.short}" />
+                <filter token="DESCRIPTION" value="${name} ${version-status}${line.separator}${description}" />
+                <filter token="VERSION" value="${version}" />
+                <filter token="LICENSE" value="${license}" />
+                <filter token="ZIP" value="${zip}" />
+            </filterset>
+        </copy>
+        <echo message="${local.revision}" file="${dir.dest}/REVISION.txt" />
+        <copy todir="${dir.dest}" flatten="false" outputencoding="utf-8">
+            <fileset dir="./src/">
+                <exclude name="build.xml" />
+                <exclude name="build.properties" />
+                <exclude name="README.md" />
+                <exclude name="build/**" />
+                <exclude name="dist/**" />
+                <exclude name="miscellaneous/**" />
+                <exclude name="submodules/" />
+                <exclude name="extension.xml" />
+            </fileset>
+        </copy>
+        <copy todir="${dir.dest}/schemata" flatten="true" outputencoding="utf-8">
+            <fileset dir=".">
+                <include name="submodules/TODO/" /><?TODO  ?>
+            </fileset>
+        </copy>
+    </target>
+    <target name="dist" depends="build">
         <property name="zip" value="${name.short}_${revision}.zip" />
         <property name="dest" value="${dir.build}/${name.short}" />
         <!--<exec executable="git" dir="submodules/TODO/">
@@ -47,38 +81,8 @@
     <exec executable="git" dir="submodules/TODO/">
       <arg value="pull"/>
     </exec>-->
-        <copy todir="${dest}" flatten="false" outputencoding="utf-8">
-            <fileset dir="./src/">
-                <exclude name="build.xml" />
-                <exclude name="build.properties" />
-                <exclude name="README.md" />
-                <exclude name="build/**" />
-                <exclude name="dist/**" />
-                <exclude name="miscellaneous/**" />
-                <exclude name="submodules/" />
-            </fileset>
-            <filterset>
-                <filter token="NAME" value="${name}" />
-                <filter token="ID" value="${name.short}" />
-                <filter token="DESCRIPTION" value="${name} ${version-status}${line.separator}${description}" />
-                <filter token="VERSION" value="${version}" />
-                <filter token="LICENSE" value="${license}" />
-                <filter token="ZIP" value="${zip}" />
-            </filterset>
-        </copy>
-        <copy todir="${dest}/schemata" flatten="true" outputencoding="utf-8">
-            <fileset dir=".">
-                <include name="submodules/TODO/" />
-            </fileset>
-            <filterset>
-                <filter token="NAME" value="${name}" />
-                <filter token="ID" value="${name.short}" />
-                <filter token="DESCRIPTION" value="${name} ${version-status}${line.separator}${description}" />
-                <filter token="VERSION" value="${version}" />
-                <filter token="LICENSE" value="${license}" />
-                <filter token="ZIP" value="${zip}" />
-            </filterset>
-        </copy>
+        
+        
         <zip basedir="${dir.build}" excludes="${name.short}/extension.xml" destfile="${dir.dist}/${revision}/${zip}" />
         <copy file="${dest}/extension.xml" todir="${dir.dist}/${revision}/" />
     </target>

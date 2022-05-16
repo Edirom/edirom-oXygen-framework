@@ -1,4 +1,4 @@
-<mei xmlns="http://www.music-encoding.org/ns/mei" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="edirom_source_786a4e99-aacd-459d-a40a-79c894e92497" meiversion="2013">
+<mei xmlns="http://www.music-encoding.org/ns/mei" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="edirom_source_${uuid}" meiversion="2013">
     <meiHead>
         <fileDesc>
             <titleStmt>
@@ -7,9 +7,9 @@
             <pubStmt/>
             <sourceDesc>
                 <source>
-                    <identifier type="siglum"><!--ED--></identifier>
+                    <identifier type="siglum"><?TODO insert siglum ?></identifier>
                     <titleStmt>
-                        <title><!--Edition--></title>
+                        <title>${ask}</title>
                     </titleStmt>
                     <pubStmt/>
                     <notesStmt>
